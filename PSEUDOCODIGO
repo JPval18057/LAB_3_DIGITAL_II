@@ -1,0 +1,52 @@
+LABORATORIO 2
+ELECTRONICA DIGITAL II, SECCION 30
+AUTOR: JUAN PABLO VALENZUELA
+CARNET: 18057
+
+CONFIG
+	PORTB as output
+	PORTC as output
+	RA0 as analog input
+	PORTD as input
+	RD0 as output
+	RD1 as output
+	RD2 as output
+	TIMER0 period 10ms
+	configure adc
+
+LOOP
+	Check increase button RD0
+	if pressed:
+		counter++
+	Check decrease button RD1
+	if pressed:
+		counter--
+	show count in screen:
+		if period =1:
+			turn on screen 1 (RD1)
+			turn off screen2 (RD2)
+			show 1st nibble in screen 1
+		if period = 2:
+			turn on screen 1 (RD2)
+			turn off screen2 (RD1)
+			show 2nd nibble in screen 2
+	PORTB = ref_value
+	if (ref value < adc_value):
+		turn on RD0
+	else:
+		turn off RD0
+	
+interrupt:
+	if TM0flag = 1:
+		reset the flag
+		count-timer ++
+		if count-timer==25
+			reset count-timer
+			period++;
+			if period==3:
+				reset the period
+		
+	if ADIF = 0:
+		reset the adc flag
+		store RESH in adc_value	
+
