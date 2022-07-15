@@ -3,3 +3,4 @@ Este es el laboratorio de electrónica digital II por Juan Pablo Valenzuela. El 
 Incluí el código principal en main.c
 La librería que hice del ADC está en adc_lib.h
 También incluí el archivo de Proteus.
+Realmente el código no me dio mucho problema, lo que si me da problema es proteus porque a veces cuesta que carguen las cosas ahí.
