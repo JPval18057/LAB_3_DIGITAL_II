@@ -2,7 +2,7 @@
  * File:   main.c
  * Author: Juan Pablo Valenzuela
  * LABORATORIO 2
- * Created on 28 de enero de 2021, 07:28 PM
+ * Created on january 28th 2021, 07:28 PM
  */
 
 //**************************************************************
@@ -162,7 +162,7 @@ void main(void) {
         //DISPLAY THE COUNTER IN PORTD
         PORTD = counter;
         //Read the value of analog voltage every 100ms
-        if (interrupts%10==0){ //en los múltiplos de 10 se va a leer (cada 40ms)
+        if (interrupts%10==0){ //en los mÃºltiplos de 10 se va a leer (cada 40ms)
             read_value();
         }        
         show_numbers();
