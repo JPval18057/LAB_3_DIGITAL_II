@@ -1,6 +1,10 @@
 # LAB_3_DIGITAL_II
-Este es el laboratorio de electrónica digital II por Juan Pablo Valenzuela. El código está en inglés a propósito porque me pareció más cómodo.
-Incluí el código principal en main.c
-La librería que hice del ADC está en adc_lib.h
-También incluí el archivo de Proteus.
-Realmente el código no me dio mucho problema, lo que si me da problema es proteus porque a veces cuesta que carguen las cosas ahí.
+
+This project was centered around using the PIC16F887 microcontroller with the XC8 compiler in MPLABX.
+It was made of 3 main parts:
+1. A routine which obtains the voltage value from two potentiometers. Each one simulated two analog sensors and their values were displayed on a LCD screen.
+its 8-bit library to initialize the LCD.
+
+2. A stable USART communication with the computer to display in the serial port the analog values.
+
+3. Lastly, send from the computer the characters "+" or "-" to increase or decrease a counter value also displayed in the same LCD screen.
